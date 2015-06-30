@@ -9,7 +9,7 @@
  * @since Starkers HTML5 3.0
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html ng-app="App" <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <title><?php
@@ -60,7 +60,7 @@
 ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body ng-controller="MainCtrl as ctrl" <?php body_class(); ?>>
 
     <header>
         <?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to the 'starkers_menu' function which can be found in functions.php.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>

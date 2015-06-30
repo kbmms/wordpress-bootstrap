@@ -40,5 +40,22 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>js/angular.min.js"></script>
+    <script>
+        function scrollNav2() {
+$('.ir-sobre-scroll , .ir-portfolio-scroll , .ir-contato-scroll').click(function(){
+$('html, body').stop().animate({
+scrollTop: $( $(this).attr('href') ).offset().top - 0
+}, 1200);
+return false;
+});
+$('.navbar-collapse a').scrollTop();
+}
+scrollNav2();
+</script>
+ <!-- Load ScrollTo -->
+    <script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.scrollTo-1.4.2-min.js"></script>
+
+    <!-- Load LocalScroll -->
+  <script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script>
 </body>
 </html>
